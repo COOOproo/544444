@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу Натали и Андрея</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2em;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3.5em;
+      animation: fadeInDown 2s ease-out;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 1.5em;
+      animation: fadeInUp 2s ease-out;
+    }
+    form {
+      animation: fadeIn 3s ease-in;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5em;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      max-width: 400px;
+      width: 100%;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+      text-align: left;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+      margin-top: 1.5em;
+      cursor: pointer;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop class="video-bg">
+    <source src="document_5354991539917453258.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <div class="overlay">
+    <h1>Натали и Андрей</h1>
+    <p>Мы рады пригласить вас на наше свадебное торжество</p>
+
+    <form action="https://formsubmit.co/prostocool18@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Ответ на приглашение на свадьбу">
+
+      <label>Вы придёте на свадьбу?
+        <select name="attendance" required>
+          <option value="">Выберите вариант</option>
+          <option value="Да">Да</option>
+          <option value="Нет">Нет</option>
+        </select>
+      </label>
+
+      <label>Сколько человек будет с вами?
+        <input type="number" name="guests" min="1" max="10" required>
+      </label>
+
+      <label>Ваши пожелания или комментарии:
+        <textarea name="comments" rows="3" placeholder="Пишите здесь..."></textarea>
+      </label>
+
+      <input type="submit" value="Отправить">
+    </form>
+  </div>
+</body>
+</html>
